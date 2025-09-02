@@ -1,0 +1,153 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* Ou outra fonte que você goste */
+    background-color: #1a1a1a;
+    /* Fundo escuro */
+    color: #ffffff;
+    /* Texto branco */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2a2a2a;
+    /* Um pouco mais claro que o fundo */
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffffff;
+    /* Uma cor de destaque, pode mudar se quiser */
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.projetos-container {
+    display: grid;
+    /* Usaremos Grid para organizar os projetos */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Cria colunas responsivas */
+    gap: 30px;
+    /* Espaço entre os projetos */
+}
+
+.projeto {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transição suave para hover */
+    position: relative;
+    /* Necessário para posicionar a descrição */
+}
+
+.projeto:hover {
+    transform: translateY(-5px);
+    /* Levanta um pouco o bloco */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    /* Sombra mais acentuada */
+}
+
+.projeto-link {
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    /* Para alinhar ícone e título */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.projeto-link:hover {
+    color: #00bcd4;
+    /* Cor ao passar o mouse no link */
+}
+
+.icone-html {
+    width: 30px;
+    /* Tamanho pequeno para o ícone */
+    height: 30px;
+    margin-right: 10px;
+    /* Espaço entre o ícone e o nome do projeto */
+    vertical-align: middle;
+    /* Ajuda no alinhamento */
+}
+
+.projeto h2 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.descricao-projeto {
+    background-color: #333333;
+    /* Fundo da descrição */
+    color: #cccccc;
+    /* Texto da descrição */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: left;
+    opacity: 0;
+    /* Começa escondida */
+    visibility: hidden;
+    /* E também invisível */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Transição suave */
+    position: absolute;
+    /* Posiciona a descrição */
+    bottom: -10px;
+    /* Ajuste para posicionar abaixo do bloco */
+    left: 0;
+    right: 0;
+    z-index: 10;
+    /* Para garantir que fique acima do resto */
+    transform: translateY(100%);
+    /* Move a descrição para baixo do bloco */
+}
+
+.projeto:hover .descricao-projeto {
+    opacity: 1;
+    /* Mostra ao passar o mouse */
+    visibility: visible;
+    /* Torna visível */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #aaaaaa;
+}
+
+
+/* Responsividade básica */
+
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .projetos-container {
+        grid-template-columns: 1fr;
+        /* Em telas menores, uma coluna só */
+    }
+}

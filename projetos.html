@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projetos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>PROJETOS GITHUB</h1>
+    </header>
+
+    <main>
+        <section class="projetos-container">
+
+            <div class="projeto">
+                <a href="https://github.com/ytt767/site-html" target="_blank" class="projeto-link">
+                    <img src="html1.png" alt="HTML" class="icone-html">
+                    <h2>SITE HTML</h2>
+                </a>
+                <div class="descricao-projeto">
+                    <p>Bom, esse é o meu primeiro projeto usando html/css.</p>
+                </div>
+            </div>
+
+            <div class="projeto">
+                <a href="LINK_DO_SEU_PROJETO_NO_GITHUB" target="_blank" class="projeto-link">
+                    <img src="html1.png" alt="HTML" class="icone-html">
+                    <h2>Nome do Projeto 2</h2>
+                </a>
+                <div class="descricao-projeto">
+                    <p>Descrição do Projeto 2. Conte um pouco sobre ele, o que ele realiza e por que ele é interessante.</p>
+                </div>
+                <style>
+                    .hamburger {
+                        position: fixed;
+                        top: 20px;
+                        left: 20px;
+                        width: 30px;
+                        height: 22px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        z-index: 1001;
+                    }
+                    
+                    .hamburger span {
+                        display: block;
+                        height: 4px;
+                        background: white;
+                        border-radius: 2px;
+                        transition: 0.3s;
+                    }
+                    
+                    .hamburger.active span:nth-child(1) {
+                        transform: rotate(45deg) translateY(9px);
+                    }
+                    
+                    .hamburger.active span:nth-child(2) {
+                        opacity: 0;
+                    }
+                    
+                    .hamburger.active span:nth-child(3) {
+                        transform: rotate(-45deg) translateY(-9px);
+                    }
+                    /* Sidebar */
+                    
+                    .sidebar {
+                        position: fixed;
+                        top: 0;
+                        left: -260px;
+                        width: 260px;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.9);
+                        backdrop-filter: blur(6px);
+                        padding: 50px 0;
+                        transition: 0.3s;
+                        z-index: 1000;
+                    }
+                    
+                    .sidebar.active {
+                        left: 0;
+                    }
+                    
+                    .sidebar a {
+                        display: block;
+                        margin: 18px 0;
+                        text-decoration: none;
+                        color: rgb(255, 255, 255);
+                        font-size: 1.2rem;
+                        transition: color 0.2s;
+                    }
+                    
+                    .sidebar a:hover {
+                        color: rgb(0, 0, 0);
+                    }
+                </style>
+
+            </div>
+            <!-- Botão Hamburguer -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Menu Lateral -->
+            <nav class="sidebar" id="sidebar">
+                <a href="index.html">Voltar</a>
+                <a href="https://github.com/ytt767" target="_blank">GitHub</a>
+            </nav>
+            <!-- Adicione mais blocos de projeto aqui seguindo o mesmo padrão -->
+
+            <script>
+                const hamburger = document.getElementById('hamburger');
+                const sidebar = document.getElementById('sidebar');
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    sidebar.classList.toggle('active');
+                });
+            </script>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ytt767</p>
+    </footer>
+
+</body>
+
+</html>
