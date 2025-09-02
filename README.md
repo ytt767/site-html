@@ -1,1 +1,2 @@
-# site-html
+salve salve, meu nome é felipe, e eu estou começando no ramo da programação, comecei com (HTML/CSS) e logo logo estarei com projetos feito em python, estou começando com sites simples, site informais, com informações sem sentido,e log logo estarei faznedo projetos classicos, como calculadoras, sites mais profissionais, e por ai vai.
+Em python eu quero fazer uma IA, estruturada obviu, em machine-learning.
